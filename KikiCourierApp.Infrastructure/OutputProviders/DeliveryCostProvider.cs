@@ -16,7 +16,10 @@ namespace KikiCourierApp.Infrastructure.OutputProviders
             foreach (PackageCostResult result in _packageCostResults)
             {
                 Console.WriteLine(
-                    $"{result.PackageId} {result.DiscountAmount} {result.DeliveryCost}"
+                    $"{result.PackageId} "
+                        + $"{result.DiscountAmount} "
+                        + $"{result.DeliveryCost} "
+                        + $"{result.DeliveryTime:F2}"
                 );
             }
         }

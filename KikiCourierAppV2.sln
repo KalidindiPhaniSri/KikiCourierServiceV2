@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KikiCourierApp.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KikiCourierApp.BLL", "KikiCourierApp.BLL\KikiCourierApp.BLL.csproj", "{971FE291-C0AA-4FBF-910F-58E492CE9607}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KikiCourierApp.Tests", "KikiCourierApp.Tests\KikiCourierApp.Tests.csproj", "{137A1263-6F77-49FA-8DC6-97473AC254E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{971FE291-C0AA-4FBF-910F-58E492CE9607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{971FE291-C0AA-4FBF-910F-58E492CE9607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{971FE291-C0AA-4FBF-910F-58E492CE9607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137A1263-6F77-49FA-8DC6-97473AC254E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137A1263-6F77-49FA-8DC6-97473AC254E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137A1263-6F77-49FA-8DC6-97473AC254E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137A1263-6F77-49FA-8DC6-97473AC254E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -10,6 +10,9 @@ namespace KikiCourierApp.BLL.Services
         private readonly List<Package> _packages =  [ ];
         private readonly ILogger<PackageReader> _logger;
         public double BaseDeliveryPrice { get; private set; }
+        public int MaxWeight { get; private set; }
+        public int VehicleCount { get; private set; }
+        public int Speed { get; private set; }
         public IReadOnlyList<Package> Packages => _packages;
 
         public PackageReader(IPackageInputProvider input, ILogger<PackageReader> logger)
@@ -24,10 +27,14 @@ namespace KikiCourierApp.BLL.Services
             ReadBaseDeliveryPrice();
             ReadPackages();
             _logger.LogInformation(
-                "Finished reading input. BaseDeliveryPrice={BaseDeliveryPrice} PackagesCount={PackagesCount}",
+                "Finished reading input. BaseDeliveryPrice={BaseDeliveryPrice}, PackagesCount={PackagesCount}, VehicleCount={VehicleCount}, MaxWeight={MaxWeight}, Speed={Speed}",
                 BaseDeliveryPrice,
-                _packages.Count
+                _packages.Count,
+                VehicleCount,
+                MaxWeight,
+                Speed
             );
+            ReadVehicleDetails();
         }
 
         public int GetPackagesCount()
@@ -62,6 +69,13 @@ namespace KikiCourierApp.BLL.Services
         private void ReadBaseDeliveryPrice()
         {
             BaseDeliveryPrice = ReadDouble("Base delivery price");
+        }
+
+        private void ReadVehicleDetails()
+        {
+            VehicleCount = ReadInt("Vehicle count");
+            Speed = ReadInt("Vehicle speed");
+            MaxWeight = ReadInt("Maximum weight");
         }
 
         public void AddSinglePackage(string id, int weight, int distance, string couponCode)

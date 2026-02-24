@@ -47,6 +47,8 @@ services.AddSingleton<IPackageInputProvider, ConsolePackageInputProvider>();
 //             sp.GetRequiredService<ILogger<FilePackageInputProvider>>()
 //         )
 // );
+services.AddSingleton<IShipmentBuilder, ShipmentBuilder>();
+services.AddSingleton<DeliveryTimeCalculator>();
 
 var serviceProvider = services.BuildServiceProvider();
 
